@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings</title>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+    </ul>
+    <script>
+
+        let nombre = 'nigell'
+        let apellido = 'jama'
+
+        //concatenar
+        let saludo = "Hola mi nombre es " + nombre + " " + apellido + "."
+        console.log(saludo)
+
+        //Interpolación de variables - Template string
+        let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
+        console.log(saludo2)
+
+        let frase = 
+        `
+        hola
+        bienvenidos
+        welcome
+        `
+        console.log(frase)
+
+        //agregando strings a string
+        let nomapell = ""
+        nomapell += `${nombre} ${apellido}`
+        console.log(nomapell)
+    </script>
+</body>
+
+</html>
