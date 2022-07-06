@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <script>
+
+        estoEsUnaFuncion()
+        //función declarada
+        function estoEsUnaFuncion() {
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+
+        //invocacion de función
+        estoEsUnaFuncion()
+
+        //las funciones declaradas permiten acceder antes de inicializar
+        function saludar(name, apellido) {
+            return `Hola ${name} ${apellido}`
+        }
+        
+        let n = "nigell", p = "jama"
+        let val = saludar(n, p)
+        console.log(val)
+
+        //funcion anónima
+        const funcionExpresada = function(){
+            console.log("eso es una función expresada")
+        }
+        //las funciones expresadas no se pueden acceder antes de inicializar
+        funcionExpresada()
+
+    </script>
+</body>
+
+</html>
