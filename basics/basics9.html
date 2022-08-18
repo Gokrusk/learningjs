@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //objeto nigell
+        //atributos: variables en un objeto
+        //metodos: funciones en un objeto
+        const nigell = {
+            nombre: "Nigell",
+            apellido: "Jama",
+            edad: 20,
+            pasatiempos: ["correr", "workout"],
+            soltero: true,
+            contacto: {
+                email: "nigell@gmail.com",
+                twitter: "@nigell_marcel"
+            },
+            saludar: function(){
+                console.log("Hola :)")
+            },
+            decirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter`)
+            }
+        }
+        console.log(nigell)
+        console.log(nigell.nombre)
+        console.log(nigell.pasatiempos[1])
+        console.log(nigell.contacto.twitter)
+        nigell.saludar()
+        nigell.decirMiNombre()
+
+        //array de las llaves del objeto
+        console.log(Object.keys(nigell))
+
+        //array de valores de las llaves
+        console.log(Object.values(nigell))
+
+        //comprueba si existe el atributo
+        console.log(nigell.hasOwnProperty("nombre"))
+    </script>
+</body>
+</html>
