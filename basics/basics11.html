@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+
+<body>
+    <script>
+        let edad = 17
+        // if(edad > 17)
+        // {
+        //     console.log("Mayor")
+        // }else{
+        //     console.log("Menor")
+        // }
+        //Ejercicio
+        /*
+            Deja dormir: 0h - 5h
+            Buenos dias: 6h - 11h
+            Buenas tardes: 12h - 18h
+            Buenas noches: 19h - 23h
+        */
+        let hora = 20
+        if (hora >= 0 && hora <= 5) {
+            console.log("Dejame dormir")
+        } else if (hora >= 6 && hora <= 11) {
+            console.log("Buenos dias")
+        } else if (hora >= 12 && hora <= 18) {
+            console.log("Buenas tardes")
+        } else {
+            console.log("Buenas noches")
+        }
+
+        //Operador ternario: ifelse en una linea: (condicion) ? verdadero : falso
+        let eresMayor = (edad > 17) ? "Mayor":"Menor"
+        console.log(eresMayor)
+
+        //switch-case
+        /*    
+            domingo - 0
+            lunes 1
+            martes 2
+            miercoles 3
+            jueves 4
+            viernes 5
+            sabado 6
+        */
+       let day = 9
+       switch (day) {
+        case 0:
+                console.log("domingo")
+            break;
+        case 1:
+                console.log("lunes")
+            break;
+        case 2:
+                console.log("martes")
+            break;
+        case 3:
+                console.log("miercoles")
+            break;
+        case 4:
+                console.log("jueves")
+            break;
+        case 5:
+                console.log("viernes")
+            break;
+        case 6:
+                console.log("sabado")
+            break;
+        default:
+                console.log(`no existe dia ${day}`)
+            break;
+       }
+    </script>
+</body>
+
+</html>
