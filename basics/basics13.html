@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de errores</title>
+</head>
+
+<body>
+    <script>
+        //trycatch
+        try {
+            console.log("Codigo a evaluar")
+            noExiste;
+            console.log("Segundo mensaje")
+        } catch (error) {
+            console.log("Captura errores")
+            console.log(error)
+        } finally {
+            console.log("Se ejecuta al final de un bloque trycatch")
+        }
+
+        //custom errors
+        try {
+            let num = "y"
+            if (isNaN(num)) {
+                throw new Error("El caracter ingresado no es un numero")
+            }
+            console.log(num*num)
+        } catch (error) {
+            console.log(`Se produjo el siguiente ${error}`)
+        }
+    </script>
+</body>
+
+</html>
