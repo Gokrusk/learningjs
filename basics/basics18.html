@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <script>
+
+        const saludar1 = () => {
+            console.log("HOLA")
+        }
+
+        const saludar = (nombre) => console.log(`HOLA ${nombre}`)
+        const saludar2 = nombre => console.log(`HOLA ${nombre}`)
+
+        saludar("nigell")
+        saludar1()
+        saludar2("nigell")
+
+        // const sumar = function (a, b) {
+        //     return a + b
+        // }
+        // console.log(sumar(1,2))
+
+        const sumar = (a, b) => a + b
+        console.log(sumar(8, 9))
+
+        const funcionDeVariasLineas = () => {
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+        funcionDeVariasLineas()
+
+        const numeros = [7, 2, 3, 4, 5]
+        //n: elemento m:index
+        numeros.forEach((n, i) => console.log(`${n} 
+            esta en la posicion ${i}`))
+
+        
+    </script>
+</body>
+
+</html>
