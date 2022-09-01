@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+
+<body>
+    <script>
+        let nombre = "fort",
+            edad = 2
+        //creando objeto normalmente con asignacion de variables
+        const perro = {
+            nombre: nombre,
+            edad: edad,
+            ladrar: function (){
+                console.log("guau guau")
+            }
+        }
+        
+        console.log(perro)
+        
+        //creando objeto literal
+        const dog = {
+            nombre,
+            edad,
+            ladrar(){
+                console.log("guau guau guauu")
+            }
+        }
+
+        console.log(dog)
+    </script>
+</body>
+
+</html>
