@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes</title>
+</head>
+
+<body>
+    <script>
+        //POO
+        // Clases: Modelo a seguir
+        // Objetos: Instancia de una clase
+        // Atributos: Caracteristica o propiedad de un objeto 
+        //            (variables dentro de un objeto)
+        // Metodos: Acciones de un objeto 
+        //          (funciones dentro de un objeto)
+
+        const animal = {
+            nombre: "Snoopy",
+            sonar(){
+                console.log("Hago sonidos")
+            }
+        }
+
+        console.log(animal)
+
+        const animal2 = {
+            nombre: "Lola Bunny",
+            sonar(){
+                console.log("Hago sonidos")
+            }
+        }
+
+        console.log(animal2)
+
+        //Generar un prototipo para crear n cantidad de animales
+        //Funcion constructora
+        //v1
+        function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre
+            this.genero = genero
+            //Metodo
+            this.sonar = function () {
+                console.log("Hago sonidos")
+            }
+            this.saludar = function(){
+                console.log(`Me llamo ${nombre}`)
+            }
+        }
+
+        //v2: asigna metodos al prototipo no a la funcion
+        function Animal(nombre, genero) {
+            //Atributos
+            this.nombre = nombre
+            this.genero = genero
+        }
+        //Metodos agregados al prototipo de la funcion constructora
+        Animal.prototype.sonar = function () {
+            console.log("Hago sonidos")
+        }
+        Animal.prototype.saludar = function(){
+            console.log(`Me llamo ${nombre}`)
+        }
+
+        const snoopy = new Animal("Snoopy", "Macho"), 
+            lolaBunny = new Animal("Lola Bunny", "Hembra")
+
+        console.log(snoopy)
+        console.log(lolaBunny)
+
+        console.log(snoopy.sonar)
+        console.log(snoopy.saludar)
+        console.log(lolaBunny.sonar)
+        console.log(lolaBunny.saludar)
+    </script>
+</body>
+
+</html>
