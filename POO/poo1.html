@@ -63,7 +63,7 @@
             console.log("Hago sonidos")
         }
         Animal.prototype.saludar = function(){
-            console.log(`Me llamo ${nombre}`)
+            console.log(`Me llamo ${this.nombre}`)
         }
 
         const snoopy = new Animal("Snoopy", "Macho"), 
@@ -72,10 +72,9 @@
         console.log(snoopy)
         console.log(lolaBunny)
 
-        console.log(snoopy.sonar)
-        console.log(snoopy.saludar)
-        console.log(lolaBunny.sonar)
-        console.log(lolaBunny.saludar)
+        snoopy.saludar()
+        lolaBunny.saludar()
+
     </script>
 </body>
 
