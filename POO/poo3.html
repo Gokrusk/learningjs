@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes&Inheritance</title>
+</head>
+
+<body>
+    <script>
+
+        //Levando funcion constructora a clase
+        // function Animal(nombre, genero) {
+        //     //Atributos
+        //     this.nombre = nombre
+        //     this.genero = genero
+        // }
+        // //Metodos agregados al prototipo de la funcion constructora
+        // Animal.prototype.sonar = function () {
+        //     console.log("Hago sonidos")
+        // }
+        // Animal.prototype.saludar = function () {
+        //     console.log(`Me llamo ${this.nombre}`)
+        // }
+
+        //Class
+        class Animal {
+            constructor(nombre, genero) {
+                this.nombre = nombre
+                this.genero = genero
+            }
+            saludar() {
+                console.log(`Hola me llamo ${this.nombre}`)
+            }
+            sonar(){
+                console.log("Sonido")
+            }
+        }
+
+        const mimi = new Animal("Mimi", "Hembre"),
+            scooby = new Animal("Scooby", "Macho")
+
+        console.log(mimi)
+        console.log(scooby)
+        mimi.saludar()
+        scooby.saludar()
+        scooby.sonar()
+
+        //Herencia
+        class Perro extends Animal {
+            constructor(nombre, genero, tamanio) {
+                //manda a llamar constructor padre
+                super(nombre, genero)
+                this.tamanio = tamanio
+            }
+            //Reescritura
+            sonar(){
+                console.log("Ladro")
+            }
+            ladrar(){
+                console.log("guauu guauu")
+            }
+        }
+
+        const scoobydoo = new Perro("Scooby Doo","Macho","Gigante")
+        console.log(scoobydoo)
+        scoobydoo.saludar()
+        scoobydoo.ladrar()
+        scoobydoo.sonar()
+    </script>
+</body>
+
+</html>
