@@ -31,29 +31,38 @@
             this.super(nombre, genero)
             this.tamanio = tamanio
         }
+        function Conejo(nombre, genero, tamanio) {
+            this.super = Animal
+            this.super(nombre, genero)
+            this.tamanio = tamanio
+        }
 
         //Heredando de Animal
         Perro.prototype = new Animal()
         Perro.prototype.constructor = Perro
         //Sobreescritura de metodo de prototipo padre en hijo
-        Perro.prototype.sonar = function(){
+        Perro.prototype.sonar = function () {
             console.log("Ladrar")
         }
-        Perro.prototype.ladrar = function(){
+        Perro.prototype.ladrar = function () {
             console.log("guauu guauu")
         }
 
-        const snoopy = new Perro("Snoopy", "Macho","Mediano"),
-            lolaBunny = new Animal("Lola Bunny", "Hembra")
+        Conejo.prototype = new Animal()
+        Conejo.prototype.constructor = Conejo
+
+        const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
+            lolaBunny = new Conejo("Lola Bunny", "Hembra", "Mediano")
 
         console.log(snoopy)
         console.log(lolaBunny)
 
-        console.log(snoopy.sonar)
-        console.log(snoopy.saludar)
+        snoopy.saludar()
+        snoopy.sonar()
+        snoopy.ladrar()
 
-        console.log(lolaBunny.sonar)
-        console.log(lolaBunny.saludar)
+        lolaBunny.saludar()
+        lolaBunny.sonar()
     </script>
 </body>
 
