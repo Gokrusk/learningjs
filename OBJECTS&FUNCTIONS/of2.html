@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object&Functions</title>
+</head>
+<body>
+    <script>
+        //Objeto Date
+        console.log(Date())
+
+        let fecha = new Date()
+        console.log(fecha)
+        //month day
+        console.log(fecha.getDate())
+        //week day S M T W T F S -> 0 1 2 3 4 5 6
+        console.log(fecha.getDay())
+        //month number 0 1 2 3 4 5 6 7 8 9 10 11
+        console.log(fecha.getMonth())
+        //year
+        console.log(fecha.getFullYear())
+        //hour 0h to 23h
+        console.log(fecha.getHours())
+        console.log(fecha.getMinutes())
+        console.log(fecha.getSeconds())
+        console.log(fecha.getMilliseconds())
+        //Simple date
+        console.log(fecha.toDateString()) //day/month/#day/#year
+        console.log(fecha.toLocaleString()) //#day/#month/#year, hour am/pm
+        console.log(fecha.toLocaleDateString()) //#day/#month/#year
+        console.log(fecha.toLocaleTimeString()) //hour am/pm
+        //UTC London date
+        console.log(fecha.getUTCDay())
+        //Time stamp: segundos pasados desde el enero/1/1970
+        console.log(Date.now())
+
+        let cumpleNigell = new Date(2002,0,6)
+        console.log(cumpleNigell)
+    </script>
+</body>
+</html>
