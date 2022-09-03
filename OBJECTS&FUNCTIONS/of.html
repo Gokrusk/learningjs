@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects&Functions</title>
+</head>
+
+<body>
+    <script>
+        //Objeto console
+        console.log("Registro de lo que ha pasado")
+        console.error("Es un error")
+        console.warn("Es un aviso")
+        console.info("Es informacion")
+
+        let nombre = "Nigell",
+            apellido = "Jama",
+            edad = 20
+
+        console.log(nombre, apellido, edad)
+        console.log(`Mi nombre es ${nombre} ${apellido}, tengo ${edad} anios`)
+
+        console.clear()
+
+        console.group("GRUPO A")
+        console.log("N")
+        console.log("M")
+        console.log("J")
+        console.groupEnd()
+
+        console.clear()
+
+        const nigell = {
+            nombre: "Nigell",
+            apellido: "Jama",
+            edad: 20
+        }
+        //crea una tabla de las propiedades del objeto
+        //sort: ordena alfab
+        console.table(Object.entries(nigell).sort())
+
+        const num = [1, 2, 3, 4, 5],
+            vow = ["a", "e", "i", "o", "u"]
+
+        console.table(num)
+        console.table(vow)
+
+        console.clear()
+
+        //cuanto tiempo tarda un bloque de codigo
+        //inicio
+        console.time("cuanto tiempo tarda")
+        const arreglo = Array(1000000)
+
+        for (let i = 0; i < arreglo.length; i++) {
+            arreglo[i] = i
+        }
+        //final
+        console.timeEnd("cuanto tiempo tarda")
+        //console.log(arreglo)
+        console.clear()
+
+        for (let i = 0; i <= 100; i++) {
+            //cuenta las ejecuciones
+            console.count("codigo for")
+            console.log(i)
+        }
+        console.clear()
+
+        //minitesting
+        let x = 4, y = 2, pruebaXY = "se espera que x se menor que y"
+        console.assert(x < y, { x, y, pruebaXY })
+    </script>
+</body>
+
+</html>
