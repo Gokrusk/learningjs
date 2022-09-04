@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects&Functions</title>
+</head>
+
+<body>
+    
+    <script>
+        //Expresiones regulares: 
+        //    sirve para validar cadenas de texto, numeros, tarjetas, correo, dni
+        //    que forman un patron
+
+        let cadena =`loremTempor elit commodo amet velit. Minim mollit commodo veniam quis eu 
+                    labore. Reprehenderit tempor proident aliquip ut cupidatat eu labore
+                    consequat. Fugiat in et eu enim Lorem qui do qui et. Occaecat sunt
+                    voluptate aliqua aliqua deserunt. Excepteur ex aliquip minim eiusmod
+                    amet elit aute do ad est sunt nulla eu quis.`
+
+        //flags: i: ignora mayus/minus g: 
+        let expReg = new RegExp("lorem", "ig")
+        
+        //found lorem: true
+        // console.log(expReg.test(cadena))
+        // console.log(expReg.exec(cadena))
+        
+        
+        let expReg2 = /lorem{2,}/ig
+        console.log(expReg2.test(cadena))
+        console.log(expReg2.exec(cadena))
+    </script>
+</body>
+
+</html>
