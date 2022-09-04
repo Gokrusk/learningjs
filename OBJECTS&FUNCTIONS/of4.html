@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects&Functions</title>
+</head>
+
+<body>
+    <script>
+        //Operador de cortocircuito OR
+        function saludar(nombre){
+            nombre = nombre||"Desconocido"
+            console.log(`Hola ${nombre}`)
+        }
+        let n = "Nigell"
+        saludar()
+        console.log("cadena"||"valor de la derecha")
+        console.log(false||"cadena")
+        console.log(""||"cadena")
+
+        //Operador de cortocircuito AND
+        console.log("cadena"&&"valor de la derecha")
+        console.log(false&&"cadena")
+        console.log(""&&"cadena")
+
+        let c
+        let a = 2
+        console.log(c??a)
+    </script>
+</body>
+
+</html>
