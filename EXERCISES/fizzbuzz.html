@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+
+<body>
+    <script>
+        //Enunciado: Escribe un programa que muestre por consola (con un print) 
+        //los números de 1 a 100 (ambos incluidos y con un salto de 
+        //línea entre cada impresión), sustituyendo los siguientes:
+        //- Múltiplos de 3 por la palabra "fizz".
+        //- Múltiplos de 5 por la palabra "buzz".
+        //- Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
+        function fizzbuzz() {
+
+            for (let i = 1; i <= 100; i++) {
+
+                let mult3 = i % 3 === 0,
+                    mult5 = i % 5 === 0
+
+                if ((mult3) && (mult5)) {
+                    console.log("fizzbuzz")
+                }else if (mult3) {
+                    console.log("fizz")
+
+                } else if (mult5) {
+                    console.log("buzz")
+
+                } else
+                    console.log(i)
+
+            }
+
+        }
+        fizzbuzz()
+    </script>
+</body>
+
+</html>
