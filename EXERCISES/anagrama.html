@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrama</title>
+</head>
+
+<body>
+    <script>
+        /*
+            * Escribe una función que reciba dos palabras (String) y retorne
+            * verdadero o falso (Bool) según sean o no anagramas.
+            * - Un Anagrama consiste en formar una palabra reordenando TODAS
+            *   las letras de otra palabra inicial.
+            * - NO hace falta comprobar que ambas palabras existan.
+            * - Dos palabras exactamente iguales no son anagrama.
+        */
+        //sort(): reordena elementos de array
+        //every()&&includes(): verifica si todos los elementos de array1 estan en array2 
+        function isAnagrama(p1, p2) {
+            if (typeof p1 != "string") {
+                console.log(`${p1} no es un string`)
+            } else {
+                p1 = p1.toLowerCase()
+                p1 = p1.split("")
+            }
+
+            if (typeof p2 != "string") {
+                console.log(`${p2} no es un string`)
+
+            } else {
+                p2 = p2.toLowerCase()
+                p2 = p2.split("")
+            }
+
+            if (p1 === p2) {
+                return false
+            } else {
+                let p1s = p1.sort(),
+                    p1l = p1.length,
+                    p2s = p2.sort(),
+                    a = p1s.every(elm => p2s.includes(elm))
+                    console.log(p1s)
+                    console.log(p2s)
+                return a
+                
+            }
+        }
+        console.log(isAnagrama("sergio", "Riesgo"))
+    </script>
+</body>
+
+</html>
